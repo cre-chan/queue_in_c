@@ -2,7 +2,7 @@
 #include "q_stdafx.h"
 
 typedef struct {
-	int* arr;
+	void* (*arr);
 	int front;
 	int rear;
 	int capacity;
@@ -17,9 +17,9 @@ queue* EMPTY_QUEUE();
 
 void del_QUEUE(queue* q);
 
-void enqueue(queue* q,int key);
+void enqueue(queue* q,void* key);
 
-int dequeue(queue* q);
+void* dequeue(queue* q);
 
 #ifdef _cplusplus
 }
